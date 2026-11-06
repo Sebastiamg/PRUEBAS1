@@ -1,0 +1,38 @@
+/*
+ * Fix z-index de CKEditor 4 para que todos sus elementos flotantes
+ * (diálogos, menú contextual, paneles de color, tooltips, etc.)
+ * aparezcan por encima de los popups fullscreen de Vuesax (~z-index 51000).
+ */
+
+/* Diálogos (tabla, imagen, link, etc.) */
+.cke_dialog_container,
+.cke_dialog {
+    z-index: 99999 !important;
+}
+
+/* Overlay/mask detrás del diálogo */
+.cke_dialog_background_cover {
+    z-index: 99998 !important;
+}
+
+/* Menú contextual (click derecho) */
+.cke_menu_panel,
+.cke_panel,
+.cke_combopanel {
+    z-index: 99997 !important;
+}
+
+/* Tooltips del toolbar */
+.cke_tooltip {
+    z-index: 99996 !important;
+}
+
+/* Dropdown de estilos, fuentes, tamaños */
+.cke_panel_block {
+    z-index: 99997 !important;
+}
+
+/* Selector de color */
+.cke_colorpanel {
+    z-index: 99997 !important;
+}

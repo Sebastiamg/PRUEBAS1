@@ -1,0 +1,31 @@
+<template>
+<div>
+    <iframe id="t0_iframe" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="display: block; width: 100%; height: 100%; margin-left: auto; margin-right: auto; padding: 0px; top: 0px; position: absolute; left: 0px;" v-bind:src="$data_url+'archivos/upload/cuadernodigital/'+url+'/'"></iframe>
+    <vs-button color="danger" @click="salir()" class="mt-3 mb-3" type="relief">Salir</vs-button>
+</div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            url: '',
+            usuario:[],
+        }
+    },
+    methods: {
+        salir(){
+            if(this.usuario.id_group == 16){
+                this.$router.push('/colegios/docente/libro/desgloselibro');
+            }else{
+                this.$router.push('/docente/libro/desgloselibro');
+            }
+        }
+    },
+    mounted() {
+        this.usuario = JSON.parse(localStorage.getItem("usuario"))
+        this.url = localStorage.getItem('url')
+        console.log(localStorage.getItem('url'))
+    },
+}
+</script>

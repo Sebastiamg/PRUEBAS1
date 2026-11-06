@@ -1,0 +1,952 @@
+[
+  {
+    "codigo": "AF",
+    "pais": "Afghanistan",
+    "nacionalidad": "Afgano"
+  },
+  {
+    "codigo": "AL",
+    "pais": "Albania",
+    "nacionalidad": "Albanés"
+  },
+  {
+    "codigo": "DZ",
+    "pais": "Algeria",
+    "nacionalidad": "Argelino"
+  },
+  {
+    "codigo": "AD",
+    "pais": "Andorra",
+    "nacionalidad": "Andorrano"
+  },
+  {
+    "codigo": "AO",
+    "pais": "Angola",
+    "nacionalidad": "Angoleño"
+  },
+  {
+    "codigo": "AG",
+    "pais": "Antigua and Barbuda",
+    "nacionalidad": "Antiguano"
+  },
+  {
+    "codigo": "AR",
+    "pais": "Argentina",
+    "nacionalidad": "Argentino"
+  },
+  {
+    "codigo": "AM",
+    "pais": "Armenia",
+    "nacionalidad": "Armenio"
+  },
+  {
+    "codigo": "AU",
+    "pais": "Australia",
+    "nacionalidad": "Australiano"
+  },
+  {
+    "codigo": "AT",
+    "pais": "Austria",
+    "nacionalidad": "Austriaco"
+  },
+  {
+    "codigo": "AZ",
+    "pais": "Azerbaijan",
+    "nacionalidad": "Azerbaiyano"
+  },
+  {
+    "codigo": "BS",
+    "pais": "Bahamas",
+    "nacionalidad": "Bahameño"
+  },
+  {
+    "codigo": "BH",
+    "pais": "Bahrain",
+    "nacionalidad": "Bahreiní"
+  },
+  {
+    "codigo": "BD",
+    "pais": "Bangladesh",
+    "nacionalidad": "Bangladesí"
+  },
+  {
+    "codigo": "BB",
+    "pais": "Barbados",
+    "nacionalidad": "Barbadense"
+  },
+  {
+    "codigo": "BY",
+    "pais": "Belarus",
+    "nacionalidad": "Bielorruso"
+  },
+  {
+    "codigo": "BE",
+    "pais": "Belgium",
+    "nacionalidad": "Belga"
+  },
+  {
+    "codigo": "BZ",
+    "pais": "Belize",
+    "nacionalidad": "Beliceño"
+  },
+  {
+    "codigo": "BJ",
+    "pais": "Benin",
+    "nacionalidad": "Beninés"
+  },
+  {
+    "codigo": "BT",
+    "pais": "Bhutan",
+    "nacionalidad": "Butanés"
+  },
+  {
+    "codigo": "BO",
+    "pais": "Bolivia",
+    "nacionalidad": "Boliviano"
+  },
+  {
+    "codigo": "BA",
+    "pais": "Bosnia and Herzegovina",
+    "nacionalidad": "Bosnio"
+  },
+  {
+    "codigo": "BW",
+    "pais": "Botswana",
+    "nacionalidad": "Botsuano"
+  },
+  {
+    "codigo": "BR",
+    "pais": "Brazil",
+    "nacionalidad": "Brasileño"
+  },
+  {
+    "codigo": "BN",
+    "pais": "Brunei",
+    "nacionalidad": "Bruneano"
+  },
+  {
+    "codigo": "BG",
+    "pais": "Bulgaria",
+    "nacionalidad": "Búlgaro"
+  },
+  {
+    "codigo": "BF",
+    "pais": "Burkina Faso",
+    "nacionalidad": "Burkinés"
+  },
+  {
+    "codigo": "BI",
+    "pais": "Burundi",
+    "nacionalidad": "Burundés"
+  },
+  {
+    "codigo": "CV",
+    "pais": "Cabo Verde",
+    "nacionalidad": "Caboverdiano"
+  },
+  {
+    "codigo": "KH",
+    "pais": "Cambodia",
+    "nacionalidad": "Camboyano"
+  },
+  {
+    "codigo": "CM",
+    "pais": "Cameroon",
+    "nacionalidad": "Camerunés"
+  },
+  {
+    "codigo": "CA",
+    "pais": "Canada",
+    "nacionalidad": "Canadiense"
+  },
+  {
+    "codigo": "CF",
+    "pais": "Central African Republic",
+    "nacionalidad": "Centrafricano"
+  },
+  {
+    "codigo": "TD",
+    "pais": "Chad",
+    "nacionalidad": "Chadiano"
+  },
+  {
+    "codigo": "CL",
+    "pais": "Chile",
+    "nacionalidad": "Chileno"
+  },
+  {
+    "codigo": "CN",
+    "pais": "China",
+    "nacionalidad": "Chino"
+  },
+  {
+    "codigo": "CO",
+    "pais": "Colombia",
+    "nacionalidad": "Colombiano"
+  },
+  {
+    "codigo": "KM",
+    "pais": "Comoros",
+    "nacionalidad": "Comorense"
+  },
+  {
+    "codigo": "CG",
+    "pais": "Congo",
+    "nacionalidad": "Congoleño"
+  },
+  {
+    "codigo": "CR",
+    "pais": "Costa Rica",
+    "nacionalidad": "Costarricense"
+  },
+  {
+    "codigo": "HR",
+    "pais": "Croatia",
+    "nacionalidad": "Croata"
+  },
+  {
+    "codigo": "CU",
+    "pais": "Cuba",
+    "nacionalidad": "Cubano"
+  },
+  {
+    "codigo": "CY",
+    "pais": "Cyprus",
+    "nacionalidad": "Chipriota"
+  },
+  {
+    "codigo": "CZ",
+    "pais": "Czech Republic",
+    "nacionalidad": "Checo"
+  },
+  {
+    "codigo": "DK",
+    "pais": "Denmark",
+    "nacionalidad": "Danés"
+  },
+  {
+    "codigo": "DJ",
+    "pais": "Djibouti",
+    "nacionalidad": "Yibutiano"
+  },
+  {
+    "codigo": "DM",
+    "pais": "Dominica",
+    "nacionalidad": "Dominiqués"
+  },
+  {
+    "codigo": "DO",
+    "pais": "Dominican Republic",
+    "nacionalidad": "Dominicano"
+  },
+  {
+    "codigo": "EC",
+    "pais": "Ecuador",
+    "nacionalidad": "Ecuatoriano"
+  },
+  {
+    "codigo": "EG",
+    "pais": "Egypt",
+    "nacionalidad": "Egipcio"
+  },
+  {
+    "codigo": "SV",
+    "pais": "El Salvador",
+    "nacionalidad": "Salvadoreño"
+  },
+  {
+    "codigo": "GQ",
+    "pais": "Equatorial Guinea",
+    "nacionalidad": "Ecuatoguineano"
+  },
+  {
+    "codigo": "ER",
+    "pais": "Eritrea",
+    "nacionalidad": "Eritreo"
+  },
+  {
+    "codigo": "EE",
+    "pais": "Estonia",
+    "nacionalidad": "Estonio"
+  },
+  {
+    "codigo": "SZ",
+    "pais": "Eswatini",
+    "nacionalidad": "Suazi"
+  },
+  {
+    "codigo": "ET",
+    "pais": "Ethiopia",
+    "nacionalidad": "Etíope"
+  },
+  {
+    "codigo": "FJ",
+    "pais": "Fiji",
+    "nacionalidad": "Fiyiano"
+  },
+  {
+    "codigo": "FI",
+    "pais": "Finland",
+    "nacionalidad": "Finlandés"
+  },
+  {
+    "codigo": "FR",
+    "pais": "France",
+    "nacionalidad": "Francés"
+  },
+  {
+    "codigo": "GA",
+    "pais": "Gabon",
+    "nacionalidad": "Gabonés"
+  },
+  {
+    "codigo": "GM",
+    "pais": "Gambia",
+    "nacionalidad": "Gambiano"
+  },
+  {
+    "codigo": "GE",
+    "pais": "Georgia",
+    "nacionalidad": "Georgiano"
+  },
+  {
+    "codigo": "DE",
+    "pais": "Germany",
+    "nacionalidad": "Alemán"
+  },
+  {
+    "codigo": "GH",
+    "pais": "Ghana",
+    "nacionalidad": "Ghanés"
+  },
+  {
+    "codigo": "GR",
+    "pais": "Greece",
+    "nacionalidad": "Griego"
+  },
+  {
+    "codigo": "GD",
+    "pais": "Grenada",
+    "nacionalidad": "Granadino"
+  },
+  {
+    "codigo": "GT",
+    "pais": "Guatemala",
+    "nacionalidad": "Guatemalteco"
+  },
+  {
+    "codigo": "GN",
+    "pais": "Guinea",
+    "nacionalidad": "Guineano"
+  },
+  {
+    "codigo": "GW",
+    "pais": "Guinea-Bissau",
+    "nacionalidad": "Bissau-guineano"
+  },
+  {
+    "codigo": "GY",
+    "pais": "Guyana",
+    "nacionalidad": "Guyanés"
+  },
+  {
+    "codigo": "HT",
+    "pais": "Haiti",
+    "nacionalidad": "Haitiano"
+  },
+  {
+    "codigo": "HN",
+    "pais": "Honduras",
+    "nacionalidad": "Hondureño"
+  },
+  {
+    "codigo": "HU",
+    "pais": "Hungary",
+    "nacionalidad": "Húngaro"
+  },
+  {
+    "codigo": "IS",
+    "pais": "Iceland",
+    "nacionalidad": "Islandés"
+  },
+  {
+    "codigo": "IN",
+    "pais": "India",
+    "nacionalidad": "Indio"
+  },
+  {
+    "codigo": "ID",
+    "pais": "Indonesia",
+    "nacionalidad": "Indonesio"
+  },
+  {
+    "codigo": "IR",
+    "pais": "Iran",
+    "nacionalidad": "Iraní"
+  },
+  {
+    "codigo": "IQ",
+    "pais": "Iraq",
+    "nacionalidad": "Iraquí"
+  },
+  {
+    "codigo": "IE",
+    "pais": "Ireland",
+    "nacionalidad": "Irlandés"
+  },
+  {
+    "codigo": "IL",
+    "pais": "Israel",
+    "nacionalidad": "Israelí"
+  },
+  {
+    "codigo": "IT",
+    "pais": "Italy",
+    "nacionalidad": "Italiano"
+  },
+  {
+    "codigo": "JM",
+    "pais": "Jamaica",
+    "nacionalidad": "Jamaicano"
+  },
+  {
+    "codigo": "JP",
+    "pais": "Japan",
+    "nacionalidad": "Japonés"
+  },
+  {
+    "codigo": "JO",
+    "pais": "Jordan",
+    "nacionalidad": "Jordano"
+  },
+  {
+    "codigo": "KZ",
+    "pais": "Kazakhstan",
+    "nacionalidad": "Kazajo"
+  },
+  {
+    "codigo": "KE",
+    "pais": "Kenya",
+    "nacionalidad": "Keniano"
+  },
+  {
+    "codigo": "KI",
+    "pais": "Kiribati",
+    "nacionalidad": "Kiribatiano"
+  },
+  {
+    "codigo": "KP",
+    "pais": "Korea, North",
+    "nacionalidad": "Norcoreano"
+  },
+  {
+    "codigo": "KR",
+    "pais": "Korea, South",
+    "nacionalidad": "Surcoreano"
+  },
+  {
+    "codigo": "KW",
+    "pais": "Kuwait",
+    "nacionalidad": "Kuwaití"
+  },
+  {
+    "codigo": "KG",
+    "pais": "Kyrgyzstan",
+    "nacionalidad": "Kirguís"
+  },
+  {
+    "codigo": "LA",
+    "pais": "Laos",
+    "nacionalidad": "Laosiano"
+  },
+  {
+    "codigo": "LV",
+    "pais": "Latvia",
+    "nacionalidad": "Letón"
+  },
+  {
+    "codigo": "LB",
+    "pais": "Lebanon",
+    "nacionalidad": "Libanés"
+  },
+  {
+    "codigo": "LS",
+    "pais": "Lesotho",
+    "nacionalidad": "Lesotense"
+  },
+  {
+    "codigo": "LR",
+    "pais": "Liberia",
+    "nacionalidad": "Liberiano"
+  },
+  {
+    "codigo": "LY",
+    "pais": "Libya",
+    "nacionalidad": "Libio"
+  },
+  {
+    "codigo": "LI",
+    "pais": "Liechtenstein",
+    "nacionalidad": "Liechtensteiniano"
+  },
+  {
+    "codigo": "LT",
+    "pais": "Lithuania",
+    "nacionalidad": "Lituano"
+  },
+  {
+    "codigo": "LU",
+    "pais": "Luxembourg",
+    "nacionalidad": "Luxemburgués"
+  },
+  {
+    "codigo": "MG",
+    "pais": "Madagascar",
+    "nacionalidad": "Malgache"
+  },
+  {
+    "codigo": "MW",
+    "pais": "Malawi",
+    "nacionalidad": "Malauí"
+  },
+  {
+    "codigo": "MY",
+    "pais": "Malaysia",
+    "nacionalidad": "Malayo"
+  },
+  {
+    "codigo": "MV",
+    "pais": "Maldives",
+    "nacionalidad": "Maldivo"
+  },
+  {
+    "codigo": "ML",
+    "pais": "Mali",
+    "nacionalidad": "Maliense"
+  },
+  {
+    "codigo": "MT",
+    "pais": "Malta",
+    "nacionalidad": "Maltés"
+  },
+  {
+    "codigo": "MH",
+    "pais": "Marshall Islands",
+    "nacionalidad": "Marfileño"
+  },
+  {
+    "codigo": "MR",
+    "pais": "Mauritania",
+    "nacionalidad": "Mauritano"
+  },
+  {
+    "codigo": "MU",
+    "pais": "Mauritius",
+    "nacionalidad": "Mauriciano"
+  },
+  {
+    "codigo": "MX",
+    "pais": "Mexico",
+    "nacionalidad": "Mexicano"
+  },
+  {
+    "codigo": "FM",
+    "pais": "Micronesia",
+    "nacionalidad": "Micronesio"
+  },
+  {
+    "codigo": "MD",
+    "pais": "Moldova",
+    "nacionalidad": "Moldavo"
+  },
+  {
+    "codigo": "MC",
+    "pais": "Monaco",
+    "nacionalidad": "Monegasco"
+  },
+  {
+    "codigo": "MN",
+    "pais": "Mongolia",
+    "nacionalidad": "Mongol"
+  },
+  {
+    "codigo": "ME",
+    "pais": "Montenegro",
+    "nacionalidad": "Montenegrino"
+  },
+  {
+    "codigo": "MA",
+    "pais": "Morocco",
+    "nacionalidad": "Marroquí"
+  },
+  {
+    "codigo": "MZ",
+    "pais": "Mozambique",
+    "nacionalidad": "Mozambiqueño"
+  },
+  {
+    "codigo": "MM",
+    "pais": "Myanmar",
+    "nacionalidad": "Birmano"
+  },
+  {
+    "codigo": "NA",
+    "pais": "Namibia",
+    "nacionalidad": "Namibio"
+  },
+  {
+    "codigo": "NR",
+    "pais": "Nauru",
+    "nacionalidad": "Nauruano"
+  },
+  {
+    "codigo": "NP",
+    "pais": "Nepal",
+    "nacionalidad": "Nepalí"
+  },
+  {
+    "codigo": "NL",
+    "pais": "Netherlands",
+    "nacionalidad": "Neerlandés"
+  },
+  {
+    "codigo": "NZ",
+    "pais": "New Zealand",
+    "nacionalidad": "Neozelandés"
+  },
+  {
+    "codigo": "NI",
+    "pais": "Nicaragua",
+    "nacionalidad": "Nicaragüense"
+  },
+  {
+    "codigo": "NE",
+    "pais": "Niger",
+    "nacionalidad": "Nigerino"
+  },
+  {
+    "codigo": "NG",
+    "pais": "Nigeria",
+    "nacionalidad": "Nigeriano"
+  },
+  {
+    "codigo": "NO",
+    "pais": "Norway",
+    "nacionalidad": "Noruego"
+  },
+  {
+    "codigo": "OM",
+    "pais": "Oman",
+    "nacionalidad": "Omaní"
+  },
+  {
+    "codigo": "PK",
+    "pais": "Pakistan",
+    "nacionalidad": "Pakistaní"
+  },
+  {
+    "codigo": "PW",
+    "pais": "Palau",
+    "nacionalidad": "Palauano"
+  },
+  {
+    "codigo": "PA",
+    "pais": "Panama",
+    "nacionalidad": "Panameño"
+  },
+  {
+    "codigo": "PG",
+    "pais": "Papua New Guinea",
+    "nacionalidad": "Papú"
+  },
+  {
+    "codigo": "PY",
+    "pais": "Paraguay",
+    "nacionalidad": "Paraguayo"
+  },
+  {
+    "codigo": "PE",
+    "pais": "Peru",
+    "nacionalidad": "Peruano"
+  },
+  {
+    "codigo": "PH",
+    "pais": "Philippines",
+    "nacionalidad": "Filipino"
+  },
+  {
+    "codigo": "PL",
+    "pais": "Poland",
+    "nacionalidad": "Polaco"
+  },
+  {
+    "codigo": "PT",
+    "pais": "Portugal",
+    "nacionalidad": "Portugués"
+  },
+  {
+    "codigo": "QA",
+    "pais": "Qatar",
+    "nacionalidad": "Qatarí"
+  },
+  {
+    "codigo": "RO",
+    "pais": "Romania",
+    "nacionalidad": "Rumano"
+  },
+  {
+    "codigo": "RU",
+    "pais": "Russia",
+    "nacionalidad": "Ruso"
+  },
+  {
+    "codigo": "RW",
+    "pais": "Rwanda",
+    "nacionalidad": "Ruandés"
+  },
+  {
+    "codigo": "KN",
+    "pais": "Saint Kitts and Nevis",
+    "nacionalidad": "Kittitiano"
+  },
+  {
+    "codigo": "LC",
+    "pais": "Saint Lucia",
+    "nacionalidad": "Luciano"
+  },
+  {
+    "codigo": "VC",
+    "pais": "Saint Vincent and the Grenadines",
+    "nacionalidad": "Vicentino"
+  },
+  {
+    "codigo": "WS",
+    "pais": "Samoa",
+    "nacionalidad": "Samoano"
+  },
+  {
+    "codigo": "SM",
+    "pais": "San Marino",
+    "nacionalidad": "Sanmarinense"
+  },
+  {
+    "codigo": "ST",
+    "pais": "Sao Tome and Principe",
+    "nacionalidad": "Santomense"
+  },
+  {
+    "codigo": "SA",
+    "pais": "Saudi Arabia",
+    "nacionalidad": "Saudí"
+  },
+  {
+    "codigo": "SN",
+    "pais": "Senegal",
+    "nacionalidad": "Senegalés"
+  },
+  {
+    "codigo": "RS",
+    "pais": "Serbia",
+    "nacionalidad": "Serbio"
+  },
+  {
+    "codigo": "SC",
+    "pais": "Seychelles",
+    "nacionalidad": "Seychelense"
+  },
+  {
+    "codigo": "SL",
+    "pais": "Sierra Leone",
+    "nacionalidad": "Sierraleonés"
+  },
+  {
+    "codigo": "SG",
+    "pais": "Singapore",
+    "nacionalidad": "Singapurense"
+  },
+  {
+    "codigo": "SK",
+    "pais": "Slovakia",
+    "nacionalidad": "Eslovaco"
+  },
+  {
+    "codigo": "SI",
+    "pais": "Slovenia",
+    "nacionalidad": "Esloveno"
+  },
+  {
+    "codigo": "SB",
+    "pais": "Solomon Islands",
+    "nacionalidad": "Salomonense"
+  },
+  {
+    "codigo": "SO",
+    "pais": "Somalia",
+    "nacionalidad": "Somalí"
+  },
+  {
+    "codigo": "ZA",
+    "pais": "South Africa",
+    "nacionalidad": "Sudafricano"
+  },
+  {
+    "codigo": "SS",
+    "pais": "South Sudan",
+    "nacionalidad": "Sursudanés"
+  },
+  {
+    "codigo": "ES",
+    "pais": "Spain",
+    "nacionalidad": "Español"
+  },
+  {
+    "codigo": "LK",
+    "pais": "Sri Lanka",
+    "nacionalidad": "Ceilanés"
+  },
+  {
+    "codigo": "SD",
+    "pais": "Sudan",
+    "nacionalidad": "Sudanés"
+  },
+  {
+    "codigo": "SR",
+    "pais": "Suriname",
+    "nacionalidad": "Surinamés"
+  },
+  {
+    "codigo": "SE",
+    "pais": "Sweden",
+    "nacionalidad": "Sueco"
+  },
+  {
+    "codigo": "CH",
+    "pais": "Switzerland",
+    "nacionalidad": "Suizo"
+  },
+  {
+    "codigo": "SY",
+    "pais": "Syria",
+    "nacionalidad": "Sirio"
+  },
+  {
+    "codigo": "TJ",
+    "pais": "Tajikistan",
+    "nacionalidad": "Tayiko"
+  },
+  {
+    "codigo": "TZ",
+    "pais": "Tanzania",
+    "nacionalidad": "Tanzano"
+  },
+  {
+    "codigo": "TH",
+    "pais": "Thailand",
+    "nacionalidad": "Tailandés"
+  },
+  {
+    "codigo": "TL",
+    "pais": "Timor-Leste",
+    "nacionalidad": "Timorense"
+  },
+  {
+    "codigo": "TG",
+    "pais": "Togo",
+    "nacionalidad": "Togolés"
+  },
+  {
+    "codigo": "TO",
+    "pais": "Tonga",
+    "nacionalidad": "Tongano"
+  },
+  {
+    "codigo": "TT",
+    "pais": "Trinidad and Tobago",
+    "nacionalidad": "Trinitense"
+  },
+  {
+    "codigo": "TN",
+    "pais": "Tunisia",
+    "nacionalidad": "Tunecino"
+  },
+  {
+    "codigo": "TR",
+    "pais": "Turkey",
+    "nacionalidad": "Turco"
+  },
+  {
+    "codigo": "TM",
+    "pais": "Turkmenistan",
+    "nacionalidad": "Turcomano"
+  },
+  {
+    "codigo": "TV",
+    "pais": "Tuvalu",
+    "nacionalidad": "Tuvaluano"
+  },
+  {
+    "codigo": "UG",
+    "pais": "Uganda",
+    "nacionalidad": "Ugandés"
+  },
+  {
+    "codigo": "UA",
+    "pais": "Ukraine",
+    "nacionalidad": "Ucraniano"
+  },
+  {
+    "codigo": "AE",
+    "pais": "United Arab Emirates",
+    "nacionalidad": "Emiratí"
+  },
+  {
+    "codigo": "GB",
+    "pais": "United Kingdom",
+    "nacionalidad": "Británico"
+  },
+  {
+    "codigo": "US",
+    "pais": "United States",
+    "nacionalidad": "Estadounidense"
+  },
+  {
+    "codigo": "UY",
+    "pais": "Uruguay",
+    "nacionalidad": "Uruguayo"
+  },
+  {
+    "codigo": "UZ",
+    "pais": "Uzbekistan",
+    "nacionalidad": "Uzbeko"
+  },
+  {
+    "codigo": "VU",
+    "pais": "Vanuatu",
+    "nacionalidad": "Vanuatuense"
+  },
+  {
+    "codigo": "VE",
+    "pais": "Venezuela",
+    "nacionalidad": "Venezolano"
+  },
+  {
+    "codigo": "VN",
+    "pais": "Vietnam",
+    "nacionalidad": "Vietnamita"
+  },
+  {
+    "codigo": "YE",
+    "pais": "Yemen",
+    "nacionalidad": "Yemení"
+  },
+  {
+    "codigo": "ZM",
+    "pais": "Zambia",
+    "nacionalidad": "Zambiano"
+  },
+  {
+    "codigo": "ZW",
+    "pais": "Zimbabwe",
+    "nacionalidad": "Zimbabuense"
+  }
+]

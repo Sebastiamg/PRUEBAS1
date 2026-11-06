@@ -1,0 +1,9 @@
+steps:
+- name: gcr.io/cloud-builders/docker
+  args: [ build, --build-arg, ENV_APP=$_ENV_APP, -t, gcr.io/$PROJECT_ID/$_IMAGE_CONTAINER, . ]
+- name: gcr.io/cloud-builders/gcloud
+  args: [ compute, instance-groups, managed, rolling-action, restart, $_INSTANCE_GROUP, --zone=$_ZONE ]  
+substitutions:
+  _ENV_APP: production # environment
+images:
+- gcr.io/$PROJECT_ID/$_IMAGE_CONTAINER

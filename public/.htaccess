@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule /index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # index.html nunca se cachea: siempre debe revisarse para tomar los
+  # nombres (con hash) del ultimo build. Si el navegador lo guarda en
+  # cache, el usuario se queda con una version vieja de la app y los
+  # chunks .js que pide ya no existen en el servidor (pantalla en
+  # blanco o la app "colgada" hasta que hace un refresh forzado).
+  <FilesMatch "index\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </FilesMatch>
+
+  # Los archivos que genera el build (chunk-vendors.<hash>.js, etc.)
+  # cambian de nombre cuando cambia su contenido, asi que es seguro
+  # cachearlos por mucho tiempo: un build nuevo nunca pisa un nombre
+  # viejo.
+  <FilesMatch "\.(js|css|woff2?|ttf|eot|svg|png|jpg|jpeg|gif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

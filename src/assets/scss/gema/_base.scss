@@ -1,0 +1,599 @@
+// =====================================================================================
+// GEMA - Componentes base
+// =====================================================================================
+// Todo vive bajo `.gema-root`. Se escriben aqui las piezas que se repiten en las
+// 13 pantallas (barra de filtros, tabla densa, panel lateral, chips de semaforo,
+// tiles) para que se comporten igual en todas y no haya estilos sueltos por vista.
+// =====================================================================================
+
+.gema-root {
+  font-family: var(--gema-font);
+  font-size: var(--gema-fs);
+  color: var(--gema-text);
+  background: var(--gema-canvas);
+  -webkit-font-smoothing: antialiased;
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  // -----------------------------------------------------------------------------
+  // Tipografia
+  // -----------------------------------------------------------------------------
+  .gema-h1 { font-size: var(--gema-fs-lg); font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+  .gema-h2 { font-size: var(--gema-fs-md); font-weight: 600; margin: 0; }
+  .gema-eyebrow {
+    font-size: var(--gema-fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gema-text-3);
+  }
+  .gema-muted { color: var(--gema-text-2); }
+  .gema-faint { color: var(--gema-text-3); }
+  .gema-num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  // -----------------------------------------------------------------------------
+  // Superficies
+  // -----------------------------------------------------------------------------
+  .gema-card {
+    background: var(--gema-surface);
+    border: 1px solid var(--gema-border);
+    border-radius: var(--gema-radius-lg);
+  }
+
+  .gema-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gema-u3);
+    height: 40px;
+    padding: 0 var(--gema-u3);
+    border-bottom: 1px solid var(--gema-border);
+  }
+
+  // -----------------------------------------------------------------------------
+  // Barra de filtros: siempre una sola linea, para no comerse la pantalla
+  // -----------------------------------------------------------------------------
+  .gema-toolbar {
+    display: flex;
+    align-items: center;
+    gap: var(--gema-u2);
+    flex-wrap: wrap;
+    padding: var(--gema-u2) var(--gema-u3);
+    background: var(--gema-surface);
+    border: 1px solid var(--gema-border);
+    border-radius: var(--gema-radius-lg);
+    margin-bottom: var(--gema-u3);
+
+    .gema-toolbar-sep {
+      width: 1px;
+      height: 20px;
+      background: var(--gema-border);
+      margin: 0 var(--gema-u);
+    }
+
+    .gema-toolbar-grow { flex: 1 1 auto; }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Controles
+  // -----------------------------------------------------------------------------
+  .gema-field { display: flex; flex-direction: column; gap: 3px; }
+
+  .gema-label {
+    font-size: var(--gema-fs-xs);
+    font-weight: 600;
+    color: var(--gema-text-2);
+    letter-spacing: 0.02em;
+  }
+
+  .gema-input,
+  .gema-select,
+  .gema-textarea {
+    width: 100%;
+    height: 30px;
+    padding: 0 var(--gema-u2);
+    font-family: inherit;
+    font-size: var(--gema-fs);
+    color: var(--gema-text);
+    background: var(--gema-surface);
+    border: 1px solid var(--gema-border);
+    border-radius: var(--gema-radius);
+    outline: none;
+    transition: border-color 0.12s ease;
+
+    &::placeholder { color: var(--gema-text-3); }
+
+    &:hover:not(:disabled) { border-color: var(--gema-border-strong); }
+
+    &:focus {
+      border-color: var(--gema-accent);
+      box-shadow: var(--gema-focus);
+    }
+
+    &:disabled {
+      background: var(--gema-surface-3);
+      color: var(--gema-text-3);
+      cursor: not-allowed;
+    }
+
+    &.is-error { border-color: var(--gema-rojo); }
+  }
+
+  // input[type=number] sin las flechitas nativas de subir/bajar: en columnas
+  // angostas (tablas de etapas, matriz de capacidad) tapan el numero escrito.
+  input[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .gema-textarea { height: auto; min-height: 64px; padding: var(--gema-u) var(--gema-u2); resize: vertical; }
+
+  .gema-select {
+    appearance: none;
+    padding-right: 24px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23838c99' d='M0 0h10L5 6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+  }
+
+  .gema-error-text {
+    font-size: var(--gema-fs-xs);
+    color: var(--gema-rojo);
+  }
+
+  .gema-search {
+    position: relative;
+    min-width: 200px;
+
+    .gema-input { padding-left: 26px; }
+
+    svg {
+      position: absolute;
+      left: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 13px;
+      color: var(--gema-text-3);
+      pointer-events: none;
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Botones
+  // -----------------------------------------------------------------------------
+  .gema-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 30px;
+    padding: 0 var(--gema-u3);
+    font-family: inherit;
+    font-size: var(--gema-fs);
+    font-weight: 500;
+    color: var(--gema-text);
+    background: var(--gema-surface);
+    border: 1px solid var(--gema-border);
+    border-radius: var(--gema-radius);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.12s ease, border-color 0.12s ease;
+
+    svg { width: 14px; height: 14px; }
+
+    &:hover:not(:disabled) { background: var(--gema-surface-3); border-color: var(--gema-border-strong); }
+    &:focus-visible { outline: none; box-shadow: var(--gema-focus); }
+    &:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    &.is-primary {
+      color: #fff;
+      background: var(--gema-accent);
+      border-color: var(--gema-accent);
+
+      &:hover:not(:disabled) { background: var(--gema-accent-hover); border-color: var(--gema-accent-hover); }
+    }
+
+    &.is-quiet {
+      background: transparent;
+      border-color: transparent;
+      color: var(--gema-text-2);
+
+      &:hover:not(:disabled) { background: var(--gema-surface-3); color: var(--gema-text); }
+    }
+
+    &.is-danger {
+      color: var(--gema-rojo);
+      border-color: var(--gema-border);
+
+      &:hover:not(:disabled) { background: var(--gema-rojo-soft); border-color: var(--gema-rojo); }
+    }
+
+    &.is-icon { width: 28px; height: 28px; padding: 0; }
+    &.is-sm { height: 26px; padding: 0 var(--gema-u2); font-size: var(--gema-fs-sm); }
+  }
+
+  .gema-btn-group {
+    display: inline-flex;
+
+    .gema-btn {
+      border-radius: 0;
+      margin-left: -1px;
+
+      &:first-child { border-radius: var(--gema-radius) 0 0 var(--gema-radius); margin-left: 0; }
+      &:last-child { border-radius: 0 var(--gema-radius) var(--gema-radius) 0; }
+      &.is-active { background: var(--gema-accent-soft); border-color: var(--gema-accent); color: var(--gema-accent-text); z-index: 1; }
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Tabla densa
+  // -----------------------------------------------------------------------------
+  .gema-table-wrap {
+    background: var(--gema-surface);
+    border: 1px solid var(--gema-border);
+    border-radius: var(--gema-radius-lg);
+    overflow: hidden;
+  }
+
+  .gema-table-scroll { overflow-x: auto; }
+
+  .gema-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: var(--gema-fs);
+
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      height: 30px;
+      padding: 0 var(--gema-u3);
+      text-align: left;
+      font-size: var(--gema-fs-xs);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gema-text-3);
+      background: var(--gema-surface-2);
+      border-bottom: 1px solid var(--gema-border);
+      white-space: nowrap;
+      user-select: none;
+
+      &.is-sortable { cursor: pointer; }
+      &.is-sortable:hover { color: var(--gema-text); }
+      &.is-num { text-align: right; }
+      &.is-actions { width: 1%; text-align: right; }
+    }
+
+    tbody td {
+      height: var(--gema-row-h);
+      padding: 0 var(--gema-u3);
+      border-bottom: 1px solid var(--gema-border);
+      vertical-align: middle;
+
+      &.is-num { text-align: right; font-variant-numeric: tabular-nums; }
+      &.is-actions { text-align: right; white-space: nowrap; }
+      &.is-wrap { white-space: normal; line-height: 1.35; padding-top: 6px; padding-bottom: 6px; }
+    }
+
+    tbody tr {
+      &:hover td { background: var(--gema-surface-2); }
+      &.is-selected td { background: var(--gema-accent-soft); }
+      &.is-inactive td { color: var(--gema-text-3); }
+      &:last-child td { border-bottom: none; }
+    }
+
+    // Las acciones aparecen al pasar el mouse: la fila se mantiene limpia.
+    .gema-row-actions { opacity: 0; transition: opacity 0.12s ease; }
+    tbody tr:hover .gema-row-actions,
+    tbody tr:focus-within .gema-row-actions { opacity: 1; }
+  }
+
+  .gema-table-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gema-u3);
+    height: 34px;
+    padding: 0 var(--gema-u3);
+    border-top: 1px solid var(--gema-border);
+    background: var(--gema-surface-2);
+    font-size: var(--gema-fs-sm);
+    color: var(--gema-text-2);
+  }
+
+  .gema-empty {
+    padding: var(--gema-u6) var(--gema-u4);
+    text-align: center;
+    color: var(--gema-text-3);
+
+    .gema-empty-title { font-size: var(--gema-fs-md); color: var(--gema-text-2); margin-bottom: var(--gema-u); }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Chips y semaforo
+  // -----------------------------------------------------------------------------
+  .gema-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 20px;
+    padding: 0 7px;
+    font-size: var(--gema-fs-xs);
+    font-weight: 600;
+    border-radius: 3px;
+    background: var(--gema-surface-3);
+    color: var(--gema-text-2);
+    white-space: nowrap;
+
+    &.is-accent { background: var(--gema-accent-soft); color: var(--gema-accent-text); }
+    &.is-verde  { background: var(--gema-verde-soft); color: var(--gema-verde); }
+    &.is-ambar  { background: var(--gema-ambar-soft); color: var(--gema-ambar); }
+    &.is-rojo   { background: var(--gema-rojo-soft); color: var(--gema-rojo); }
+    &.is-gris   { background: var(--gema-gris-soft); color: var(--gema-gris); }
+  }
+
+  .gema-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex: none;
+
+    &.is-verde { background: var(--gema-verde); }
+    &.is-ambar { background: var(--gema-ambar); }
+    &.is-rojo  { background: var(--gema-rojo); }
+    &.is-gris  { background: var(--gema-gris); }
+  }
+
+  .gema-sem-verde { color: var(--gema-verde); }
+  .gema-sem-ambar { color: var(--gema-ambar); }
+  .gema-sem-rojo  { color: var(--gema-rojo); }
+  .gema-sem-gris  { color: var(--gema-gris); }
+
+  // -----------------------------------------------------------------------------
+  // Tiles de resumen
+  // -----------------------------------------------------------------------------
+  .gema-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--gema-u2);
+    margin-bottom: var(--gema-u3);
+  }
+
+  .gema-tile {
+    padding: var(--gema-u2) var(--gema-u3);
+    background: var(--gema-surface);
+    border: 1px solid var(--gema-border);
+    border-radius: var(--gema-radius-lg);
+
+    .gema-tile-label {
+      font-size: var(--gema-fs-xs);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gema-text-3);
+      margin-bottom: 2px;
+    }
+
+    .gema-tile-value {
+      font-size: var(--gema-fs-num);
+      font-weight: 600;
+      line-height: 1.15;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+    }
+
+    .gema-tile-note {
+      font-size: var(--gema-fs-xs);
+      color: var(--gema-text-3);
+      margin-top: 2px;
+    }
+
+    &.is-alerta .gema-tile-value { color: var(--gema-ambar); }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Panel lateral (en lugar de modal centrado)
+  // -----------------------------------------------------------------------------
+  // El contenedor es la capa fija a pantalla completa; la mascara y el panel se
+  // posicionan dentro de el. Asi el contenedor tiene una caja real que se pinta,
+  // que es lo que necesita <transition> para detectar el fin de la animacion.
+  .gema-panel-host {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 52000;
+  }
+
+  .gema-panel-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--gema-overlay);
+  }
+
+  .gema-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 420px;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: var(--gema-surface);
+    box-shadow: var(--gema-shadow-panel);
+
+    &.is-wide { width: 640px; }
+
+    .gema-panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gema-u2);
+      height: var(--gema-header-h);
+      padding: 0 var(--gema-u3);
+      border-bottom: 1px solid var(--gema-border);
+      flex: none;
+    }
+
+    .gema-panel-body {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      padding: var(--gema-u3);
+      display: flex;
+      flex-direction: column;
+      gap: var(--gema-u3);
+    }
+
+    .gema-panel-foot {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--gema-u2);
+      height: 48px;
+      padding: 0 var(--gema-u3);
+      border-top: 1px solid var(--gema-border);
+      flex: none;
+    }
+  }
+
+  // --- Modo modal: dialogo centrado y ancho -------------------------------
+  // Para los formularios con muchos campos o con tablas dentro, que en la
+  // columna estrecha del panel lateral quedan ilegibles.
+  .gema-panel-host.modo-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gema-u4);
+
+    .gema-panel {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      max-height: calc(100vh - var(--gema-u6));
+      border: 1px solid var(--gema-border);
+      border-radius: var(--gema-radius-lg);
+      box-shadow: var(--gema-shadow-pop);
+      overflow: hidden;
+
+      &.tam-md { max-width: 720px; }
+      &.tam-lg { max-width: 940px; }
+      &.tam-xl { max-width: 1180px; }
+    }
+
+    // Dentro de un modal ancho, los formularios respiran en tres columnas.
+    .gema-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--gema-u3);
+    }
+  }
+
+  .gema-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gema-u3);
+  }
+
+  .gema-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--gema-u3);
+  }
+
+  @media (max-width: 860px) {
+    .gema-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 620px) {
+    .gema-grid-2,
+    .gema-grid-3 { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Utilidades
+  // -----------------------------------------------------------------------------
+  .gema-row { display: flex; align-items: center; gap: var(--gema-u2); }
+  .gema-col { display: flex; flex-direction: column; gap: var(--gema-u2); }
+  .gema-spacer { flex: 1 1 auto; }
+  .gema-hide { display: none !important; }
+
+  .gema-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gema-u2);
+    padding: var(--gema-u2) var(--gema-u3);
+    border: 1px solid var(--gema-border);
+    border-left: 2px solid var(--gema-accent);
+    border-radius: var(--gema-radius);
+    background: var(--gema-surface-2);
+    font-size: var(--gema-fs-sm);
+    color: var(--gema-text-2);
+
+    &.is-warn { border-left-color: var(--gema-ambar); }
+    &.is-error { border-left-color: var(--gema-rojo); }
+  }
+
+  .gema-kv {
+    display: grid;
+    grid-template-columns: minmax(96px, auto) 1fr;
+    gap: 5px var(--gema-u3);
+    font-size: var(--gema-fs-sm);
+
+    dt { color: var(--gema-text-3); }
+    dd { margin: 0; color: var(--gema-text); }
+  }
+
+  // Barra fina de cumplimiento; sin degradados, solo dos bloques planos.
+  .gema-bar {
+    height: 4px;
+    border-radius: 2px;
+    background: var(--gema-surface-3);
+    overflow: hidden;
+
+    span { display: block; height: 100%; background: var(--gema-accent); }
+    span.is-verde { background: var(--gema-verde); }
+    span.is-ambar { background: var(--gema-ambar); }
+    span.is-rojo { background: var(--gema-rojo); }
+  }
+
+  .gema-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--gema-border-strong);
+    border-top-color: var(--gema-accent);
+    border-radius: 50%;
+    animation: gema-spin 0.6s linear infinite;
+  }
+}
+
+@keyframes gema-spin { to { transform: rotate(360deg); } }
+
+// Scrollbars discretas dentro del modulo.
+.gema-root {
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gema-border-strong);
+    border: 3px solid transparent;
+    border-radius: 6px;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gema-text-3); background-clip: content-box; }
+}
