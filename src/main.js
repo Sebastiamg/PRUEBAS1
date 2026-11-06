@@ -116,6 +116,7 @@ Vue.prototype.$apiDemoIluminar = "https://backdemo.iluminareditores.com/"
 import axiosG from 'axios'
 import axios from './axios.js'
 axios.defaults.withCredentials = true
+axios.defaults.withXSRFToken = true
 Vue.prototype.$http = axios
     // Filters
 import './filters/filters.js'
