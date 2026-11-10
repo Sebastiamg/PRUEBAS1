@@ -42,7 +42,7 @@
         "tableexport": "^5.2.0",
         "v-idle": "^0.2.1",
         "v-video-embed": "^1.0.8",
-        "vue": "^2.6.10",
+        "vue": "^2.7.16",
         "vue-apexcharts": "^1.6.0",
         "vue-apollo": "^3.0.7",
         "vue-backtotop": "^1.6.1",
@@ -78,6 +78,6 @@
         "script-loader": "0.7.2",
         "tailwindcss": "^1.0.1",
         "vue-filepond": "^6.0.0",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.7.16"
     }
 }
