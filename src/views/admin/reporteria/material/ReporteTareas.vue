@@ -137,7 +137,6 @@
 <script>
 import chart from "vue-apexcharts";
 import moment from 'moment'
-import { METHODS } from "http";
 export default{
     components: { apexchart: chart },
     data(){

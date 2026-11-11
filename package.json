@@ -5,7 +5,10 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
+        "lint": "vue-cli-service lint",
+        "dev:vite": "vite",
+        "build:vite": "vite build",
+        "preview:vite": "vite preview"
     },
     "dependencies": {
         "@braid/vue-formulate": "^2.5.2",
@@ -71,12 +74,17 @@
         "vuex": "^3.1.1"
     },
     "devDependencies": {
+        "@vitejs/plugin-vue2": "2.3.4",
         "@vue/cli-plugin-babel": "^3.7.0",
         "@vue/cli-service": "^3.7.0",
+        "autoprefixer": "9.8.8",
         "filepond": "^4.30.3",
+        "postcss": "7.0.39",
         "sass-loader": "^7.1.0",
         "script-loader": "0.7.2",
         "tailwindcss": "^1.0.1",
+        "vite": "7.3.8",
+        "vite-postcss-plugins": "file:tools/vite-postcss",
         "vue-filepond": "^6.0.0",
         "vue-template-compiler": "^2.7.16"
     }

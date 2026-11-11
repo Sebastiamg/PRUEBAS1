@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div>
     <vs-tabs :color="colorx">
       <vs-tab label="Promocion de Contratos" icon="dashboard" @click="colorx = '#8B0000';menu = 0;">

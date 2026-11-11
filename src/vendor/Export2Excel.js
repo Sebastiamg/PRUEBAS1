@@ -1,5 +1,7 @@
 /* eslint-disable */
-require('script-loader!file-saver');
+// Antes: require('script-loader!file-saver'), sintaxis exclusiva de webpack que ademas rompia el
+// escaneo de dependencias de Vite. file-saver sigue publicando window.saveAs al cargarse.
+import { saveAs } from 'file-saver'
 import XLSX from 'xlsx'
 
 function generateArray(table) {

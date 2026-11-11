@@ -128,7 +128,6 @@
 import Vue from 'vue'
 import axios from 'axios'
 import vSelect from 'vue-select'
-import { format } from 'path'
 export default {
     data() {
         return{

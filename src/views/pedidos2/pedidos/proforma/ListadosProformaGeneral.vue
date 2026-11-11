@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
     <vx-card>
         <div class="vx-row">
             <div class="mb-1">

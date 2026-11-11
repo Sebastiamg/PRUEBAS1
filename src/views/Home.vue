@@ -339,7 +339,6 @@ import moment from 'moment'
 const HomeBodegaAdminVue = () => import('./home/bodega/dashboardBodegaAdmin.vue')
 const HomeEstudianteVue = () =>  import('./home/HomeEstudiante.vue')
 const ScreenSolicitud = () =>  import('./facturacion/10_10_1_4/Reposicion/homelibreria.vue')
-import notificaciones from '@/layouts/components/navbar/components/NotificationDropDown.vue';
 import NotificationService from '@/services/NotificationService';
 const Home_Salle_Docente = () => import('./home/Home_Salle_Docente.vue');
 export default {
@@ -484,7 +483,6 @@ export default {
     HomeBodegaAdminVue,
     HomeEstudianteVue,
     ScreenSolicitud,
-    notificaciones,
     Home_Salle_Docente
   },
   mounted() {

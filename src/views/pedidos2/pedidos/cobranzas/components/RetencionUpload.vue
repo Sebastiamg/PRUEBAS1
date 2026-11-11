@@ -118,6 +118,10 @@
 </template>
 
 <script>
+import imgPdf from '@/assets/images/file-icons/pdf.png'
+import imgDoc from '@/assets/images/file-icons/doc.png'
+import imgFile from '@/assets/images/file-icons/file.png'
+import imgFileNotFound from '@/assets/images/file-icons/file-not-found.png'
 import vSelect from 'vue-select'
 import axios from 'axios'
 export default {
@@ -303,13 +307,13 @@ export default {
                     fileData.img = reader.result; // Si es imagen, asignamos el resultado de la lectura como imagen
                     fileData.tipo = "img";
                 } else if (isPDF) {
-                    fileData.img = require('@/assets/images/file-icons/pdf.png'); // Icono para PDF
+                    fileData.img = imgPdf; // Icono para PDF
                     fileData.tipo = "pdf";
                 } else if (isWord) {
-                    fileData.img = require('@/assets/images/file-icons/doc.png'); // Icono para Word (solo para .doc, .docx)
+                    fileData.img = imgDoc; // Icono para Word (solo para .doc, .docx)
                     fileData.tipo = "word";
                 } else if (isOther) {
-                    fileData.img = require('@/assets/images/file-icons/file.png'); // Icono para archivos desconocidos
+                    fileData.img = imgFile; // Icono para archivos desconocidos
                     fileData.tipo = "other";
                 }
 
@@ -399,23 +403,23 @@ export default {
                                         if (!response.data.existe) {
                                             console.warn('El archivo no existe en el servidor:', item.url);
                                             item.archivoNoExiste = true; // Indicamos que no existe
-                                            this.$set(item, 'img', require('@/assets/images/file-icons/file-not-found.png'));
+                                            this.$set(item, 'img', imgFileNotFound);
                                         } else {
                                             if (fileType === 'img') {
                                                 this.$set(item, 'img', item.url);
                                             } else if (fileType === 'pdf') {
-                                                this.$set(item, 'img', require('@/assets/images/file-icons/pdf.png'));
+                                                this.$set(item, 'img', imgPdf);
                                             } else if (fileType === 'word') {
-                                                this.$set(item, 'img', require('@/assets/images/file-icons/doc.png'));
+                                                this.$set(item, 'img', imgDoc);
                                             } else {
-                                                this.$set(item, 'img', require('@/assets/images/file-icons/file.png'));
+                                                this.$set(item, 'img', imgFile);
                                             }
                                         }
                                     })
                                     .catch(err => {
                                         console.error('Error al verificar el archivo:', err);
                                         item.archivoNoExiste = true; // Error en la verificación, lo tratamos como no existente
-                                        this.$set(item, 'img', require('@/assets/images/file-icons/file-not-found.png'));
+                                        this.$set(item, 'img', imgFileNotFound);
                                     });
                             }
                         });

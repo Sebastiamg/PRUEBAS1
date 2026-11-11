@@ -575,8 +575,7 @@
       },
       exportarErroresExcel(){
         let me = this;
-        require.ensure([], () => {
-          const { export_json_to_excel } = require('@/vendor/Export2Excel');
+        import('@/vendor/Export2Excel').then(({ export_json_to_excel }) => {
           const tHeader = ['ID Pregunta', 'Pregunta', 'Error'];
           const filterVal = ['id_pregunta', 'descripcion', 'message'];
           const list = me.arrayEliminarPreguntas.map(item => ({

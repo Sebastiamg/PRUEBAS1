@@ -116,7 +116,9 @@ Vue.prototype.$apiDemoIluminar = "https://backdemo.iluminareditores.com/"
 import axiosG from 'axios'
 import axios from './axios.js'
 axios.defaults.withCredentials = true
-axios.defaults.withXSRFToken = true
+// El token CSRF solo se verifica en metodos que modifican datos; enviarlo en GET/HEAD
+// convierte cada lectura cross-origin en preflight (OPTIONS) sin ningun beneficio.
+axios.defaults.withXSRFToken = (config) => !['get', 'head'].includes((config.method || 'get').toLowerCase())
 Vue.prototype.$http = axios
     // Filters
 import './filters/filters.js'
@@ -160,7 +162,7 @@ import 'prismjs/themes/prism-tomorrow.css'
 
 
 // Feather font icon
-require('./assets/css/iconfont.css')
+import './assets/css/iconfont.css'
 
 import VueApollo from 'vue-apollo'
 
@@ -232,7 +234,8 @@ const apolloProvider = new VueApollo({
 // defaultClient: apolloClient,
 // })
 
-window.$ = window.jQuery = require('jquery')
+import jQuery from 'jquery'
+window.$ = window.jQuery = jQuery
 
 Vue.config.productionTip = false
 

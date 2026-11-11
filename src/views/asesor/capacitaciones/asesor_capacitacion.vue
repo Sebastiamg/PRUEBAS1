@@ -508,7 +508,6 @@ import {
   CalendarViewHeader
 } from 'vue-simple-calendar'
 import moduleCalendar from '@/store/calendario_capacitacion/moduleCalendar.js'
-require('vue-simple-calendar/static/css/default.css')
 import vSelect from 'vue-select'
 import moment from 'moment'
 import Datepicker from 'vuejs-datepicker'
@@ -520,6 +519,7 @@ import {
 } from 'vuejs-datepicker/src/locale'
 import CertificadosAsignarEncuesta from '../../certificados/components/CertificadosAsignarEncuesta.vue'
 
+import 'vue-simple-calendar/static/css/default.css' // ultimo import: con require se cargaba despues de los demas
 export default {
   components: {
     CalendarView,

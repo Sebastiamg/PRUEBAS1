@@ -14,6 +14,10 @@
 </template>
 
 <script>
+import imgDoc from '@/assets/images/file-icons/doc.png'
+import imgJpg from '@/assets/images/file-icons/jpg.png'
+import imgXls from '@/assets/images/file-icons/xls.png'
+import imgPdf from '@/assets/images/file-icons/pdf.png'
 import Vue from 'vue'
 import axios from 'axios'
 import vue2Dropzone from 'vue2-dropzone'
@@ -66,11 +70,11 @@ export default {
     computed: {
         get_ext_img() {
             return (ext) => {
-                if (ext === 'doc') return require('@/assets/images/file-icons/doc.png')
-                else if (ext === 'jpg') return require('@/assets/images/file-icons/jpg.png')
-                else if (ext === 'xls') return require('@/assets/images/file-icons/xls.png')
-                else if (ext === 'pdf') return require('@/assets/images/file-icons/pdf.png')
-                else return require('@/assets/images/file-icons/doc.png')
+                if (ext === 'doc') return imgDoc
+                else if (ext === 'jpg') return imgJpg
+                else if (ext === 'xls') return imgXls
+                else if (ext === 'pdf') return imgPdf
+                else return imgDoc
             }
         },
     },

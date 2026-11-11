@@ -1,0 +1,12 @@
+{
+    "name": "vite-postcss-plugins",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Plugins PostCSS 8 que usa solo Vite mientras convive con Vue CLI (PostCSS 7). Viven aqui, fuera de la raiz, porque postcss-rtl@1.7.3 de Vue CLI usa el postcss de la raiz sin declararlo y se rompe con PostCSS 8.",
+    "main": "index.js",
+    "dependencies": {
+        "autoprefixer": "10.6.2",
+        "postcss": "8.5.32",
+        "postcss-rtl": "2.0.0"
+    }
+}

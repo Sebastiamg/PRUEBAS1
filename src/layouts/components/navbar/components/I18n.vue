@@ -14,6 +14,10 @@
 </template>
 
 <script>
+import imgEn from '@/assets/images/flags/en.png'
+import imgPt from '@/assets/images/flags/pt.png'
+import imgFr from '@/assets/images/flags/fr.png'
+import imgDe from '@/assets/images/flags/de.png'
 export default {
   computed: {
     i18n_locale_img () {
@@ -23,11 +27,11 @@ export default {
       // return require(`@/assets/images/flags/${this.$i18n.locale}.png`)
 
       const locale = this.$i18n.locale
-      if (locale === 'en')      return require('@/assets/images/flags/en.png')
-      else if (locale === 'pt') return require('@/assets/images/flags/pt.png')
-      else if (locale === 'fr') return require('@/assets/images/flags/fr.png')
-      else if (locale === 'de') return require('@/assets/images/flags/de.png')
-      else return require('@/assets/images/flags/en.png')
+      if (locale === 'en')      return imgEn
+      else if (locale === 'pt') return imgPt
+      else if (locale === 'fr') return imgFr
+      else if (locale === 'de') return imgDe
+      else return imgEn
     },
     getCurrentLocaleData () {
       const locale = this.$i18n.locale

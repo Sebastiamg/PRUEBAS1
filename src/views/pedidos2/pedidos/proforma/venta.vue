@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <vx-card :title="sendPedido.id_pedido == 0||setPuntos.ca_codigo_agrupado==''  ? 'Crear Pedido':'Informacion #'+id">
     <vs-col vs-type="flex" vs-w="12" class="mt-2 m-3">
         <vs-button type="border" color="primary" class="mr-2" @click="getfactpdf();startLoading()">Exportar PDF</vs-button>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div>
     <vs-button v-if="AdminBodega" @click="imprimir();m_imprimirTodos('12px',id)">Imprimir</vs-button>
     <vs-button v-else @click="m_imprimirTodos('12px',id)">Imprimir</vs-button>

@@ -92,6 +92,8 @@
 </template>
 
 <script>
+import imgDiplomaDirector from '@/assets/images/seminarios/diploma_director.png'
+import imgDiploma2 from '@/assets/images/seminarios/diploma2.jpg'
 export default {
   props: {
     previewMode: { type: Boolean, default: false },
@@ -136,9 +138,9 @@ export default {
     },
     fondoDiplomaSrc() {
       if (this.esModoDirector) {
-        return require('@/assets/images/seminarios/diploma_director.png')
+        return imgDiplomaDirector
       }
-      return require('@/assets/images/seminarios/diploma2.jpg')
+      return imgDiploma2
     },
     fechaMostrar() {
       if (this.fechaFin) return String(this.fechaFin).split(/[ T]/)[0]

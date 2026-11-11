@@ -5,7 +5,7 @@
       <div class="varios-container varios-hero__inner">
         <div class="varios-hero__brand">
           <img
-            :src="require('@/assets/images/prolipa.png')"
+            src="@/assets/images/prolipa.png"
             alt="Prolipa"
             class="varios-hero__logo"
           />
@@ -94,7 +94,7 @@
           >
             <div class="varios-card__media">
               <img
-                :src="require('@/assets/images/enlaces/' + item.imagen)"
+                :src="imgEnlace(item.imagen)"
                 :alt="item.titulo"
                 class="varios-card__img"
               />
@@ -259,6 +259,19 @@
 import Vue from 'vue'
 import { getIdFromUrl } from 'vue-youtube'
 import VueYoutube from 'vue-youtube'
+// Antes: require('@/assets/images/enlaces/' + imagen), que en webpack incluia toda la carpeta.
+import enlaceCatalogo2023 from '@/assets/images/enlaces/catalogo-2023.jpg'
+import enlaceCosta from '@/assets/images/enlaces/costa.jpg'
+import enlaceListaPrecios from '@/assets/images/enlaces/lista_precios.jpg'
+import enlacePlanLector from '@/assets/images/enlaces/plan_lector.jpg'
+import enlaceSierra from '@/assets/images/enlaces/sierra.jpg'
+const IMAGENES_ENLACES = {
+  'catalogo-2023.jpg': enlaceCatalogo2023,
+  'costa.jpg': enlaceCosta,
+  'lista_precios.jpg': enlaceListaPrecios,
+  'plan_lector.jpg': enlacePlanLector,
+  'sierra.jpg': enlaceSierra
+}
 Vue.use(VueYoutube)
 
 export default {
@@ -365,6 +378,9 @@ export default {
     if (this.observer) this.observer.disconnect()
   },
   methods: {
+    imgEnlace(nombre) {
+      return IMAGENES_ENLACES[nombre]
+    },
     openVideo(tr) {
       let me = this
       me.video.video = tr

@@ -3,12 +3,14 @@
 *.orig
 bin/
 dist/
+dist-vite/
 node_modules/
 vuesax-laravel-starter/node_modules/
 temp/
 versions/
 *.zip
 /bin
+*.har
 # package.json
 package-lock.json
 docs/.vuepress/dist/

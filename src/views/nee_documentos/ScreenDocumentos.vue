@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <vx-card>
     <vs-tabs :color="colorx">
       <vs-tab label="Temas" icon-pack="feather" icon="icon-align-justify" @click="getTemas();colorx = '#8B0000';menu = 0;">

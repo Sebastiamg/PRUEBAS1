@@ -155,7 +155,6 @@
 <script>
 import { CalendarView, CalendarViewHeader } from 'vue-simple-calendar'
 import moduleCalendar from '@/store/agenda_planificacion/moduleCalendar.js'
-require('vue-simple-calendar/static/css/default.css')
 import vSelect from 'vue-select'
 import moment from 'moment'
 import Datepicker from 'vuejs-datepicker'
@@ -163,6 +162,7 @@ import flatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
 import { en, he } from 'vuejs-datepicker/src/locale'
 
+import 'vue-simple-calendar/static/css/default.css' // ultimo import: con require se cargaba despues de los demas
 export default {
   components: {
     CalendarView,

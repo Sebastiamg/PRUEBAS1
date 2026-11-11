@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="login-planificaciones-container">
     <!-- Partículas de fondo animadas -->
     <div class="particles-background">

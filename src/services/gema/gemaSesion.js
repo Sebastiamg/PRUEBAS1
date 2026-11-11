@@ -100,7 +100,7 @@ export default {
 
     try {
       // Import diferido: gemaApi importa este modulo, y al reves seria circular.
-      const api = require('./gemaApi').default
+      const api = (await import('./gemaApi')).default
       const r = await api.get('flujo')
       state.flujo = r.data
     } catch (e) {

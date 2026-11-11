@@ -43,11 +43,9 @@ import ConfirmEliminarVue from '@/views/configuracion/Reutilizable/ConfirmElimin
 import VerificacionRepository from '@/repositories/VerificacionRepository'
 import ListadoDescuentosVue from './ListadoDescuentos.vue';
 import Vue from 'vue'
-const componentNames = ["CrearDescuentos"];
-for (const componentName of componentNames) {
-  const component = () => import(`./${componentName}`);
-  Vue.component(componentName+'Vue', component);
-}
+// Import explicito: Vite no puede analizar import(`./${nombre}`) que apunte a esta misma carpeta
+// (en el build quedaba sin resolver y daba 404). Antes: bucle sobre ["CrearDescuentos"].
+Vue.component('CrearDescuentosVue', () => import('./CrearDescuentos.vue'));
 export default{
   components:{
     ConfirmEliminarVue,

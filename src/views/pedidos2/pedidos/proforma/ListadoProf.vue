@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
     <vx-card>
         <div v-if="menu != 0">
             <vs-button type="line" class="mt-2" @click="getregresa();">← Regresar</vs-button>

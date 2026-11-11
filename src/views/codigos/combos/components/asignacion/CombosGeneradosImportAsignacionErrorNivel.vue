@@ -34,6 +34,7 @@
   </div>
 </template>
 <script>
+import FileSaver from 'file-saver'
 export default{
   data(){
     return{
@@ -127,7 +128,6 @@ export default{
             };
 
             // Usar file-saver para descargar
-            const FileSaver = require('file-saver');
             FileSaver.saveAs(new Blob([s2ab(wbout)], {
               type: "application/octet-stream"
             }), `${nombreArchivo}.xlsx`);

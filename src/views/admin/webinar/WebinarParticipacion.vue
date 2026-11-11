@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div>
     <vs-card>
            <div class="vx-col w-full" >

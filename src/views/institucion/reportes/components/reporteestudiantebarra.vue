@@ -56,8 +56,9 @@ import axios from 'axios'
 
 //para el reporte
 import pdfMake from "pdfmake/build/pdfmake";
-var pdfFonts = require ('pdfmake/build/vfs_fonts.js');
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+import pdfFonts from 'pdfmake/build/vfs_fonts.js';
+// pdfmake >= 0.2.15 exporta el vfs directamente; las versiones anteriores lo anidaban en pdfMake.vfs
+pdfMake.vfs = pdfFonts.pdfMake ? pdfFonts.pdfMake.vfs : pdfFonts;
 
 export default {
   data() {

@@ -4,7 +4,7 @@
         <div class="vx-col w-full mt-2 mx-auto" v-if="modal_carta_elegida">
             <!-- {{arr_equipos[inc_equipos-1]}} -->
             <!-- <h3 class="text-underline">Equipo {{res_carta}} </h3> -->
-            <img class="card-big mx-auto" :src="require('../../assets/cartas/'+res_carta.src)">
+            <img class="card-big mx-auto" :src="imgCarta(res_carta.src)">
             <div class="text-center">
                 <vs-button class="mt-4 d-inline m-2" color="primary" type="filled" @click="f_reto(1)">Reto cumplido</vs-button>
                 <vs-button class="mt-4 d-inline m-2" color="danger" type="filled" @click="f_reto(2)">Reto NO cumplido</vs-button>
@@ -48,8 +48,8 @@
                 <div class="cards">
                     <div class="m-1" v-for="(item,index) in cartasTmp" :key="index">
                         <span class="numero" :id="'num'+item.id" :ref="'num'+item.id">{{index+1}}</span>
-                        <img class="card" :id="'img'+item.id" :src="require('../../assets/cartas/'+item.cover)">
-                        <img class="card" :id="'sobre'+item.id" :src="require('../../assets/cartas/'+item.src)">
+                        <img class="card" :id="'img'+item.id" :src="imgCarta(item.cover)">
+                        <img class="card" :id="'sobre'+item.id" :src="imgCarta(item.src)">
                     </div>
                 </div>
             </vs-col>
@@ -70,6 +70,60 @@
 
 <script>
 import $ from 'jquery'
+// Antes: require('../../assets/cartas/' + nombre), que en webpack incluia toda la carpeta.
+// Se importan los 25 archivos de src/assets/cartas para conservar ese comportamiento.
+import carta1 from '@/assets/cartas/1.jpg'
+import carta2 from '@/assets/cartas/2.jpg'
+import carta3 from '@/assets/cartas/3.jpg'
+import carta4 from '@/assets/cartas/4.jpg'
+import carta5 from '@/assets/cartas/5.jpg'
+import carta6 from '@/assets/cartas/6.jpg'
+import carta7 from '@/assets/cartas/7.jpg'
+import carta8 from '@/assets/cartas/8.jpg'
+import carta9 from '@/assets/cartas/9.jpg'
+import carta10 from '@/assets/cartas/10.jpg'
+import carta11 from '@/assets/cartas/11.jpg'
+import carta12 from '@/assets/cartas/12.jpg'
+import carta13 from '@/assets/cartas/13.jpg'
+import carta14 from '@/assets/cartas/14.jpg'
+import carta15 from '@/assets/cartas/15.jpg'
+import carta16 from '@/assets/cartas/16.jpg'
+import carta17 from '@/assets/cartas/17.jpg'
+import carta18 from '@/assets/cartas/18.jpg'
+import carta19 from '@/assets/cartas/19.jpg'
+import carta20 from '@/assets/cartas/20.jpg'
+import cartaNaranja from '@/assets/cartas/naranja.jpg'
+import cartaPrimero from '@/assets/cartas/primero.png'
+import cartaSegundo from '@/assets/cartas/segundo.png'
+import cartaTercero from '@/assets/cartas/tercero.png'
+import cartaVerde from '@/assets/cartas/verde.jpg'
+const IMAGENES_CARTAS = {
+    '1.jpg': carta1,
+    '2.jpg': carta2,
+    '3.jpg': carta3,
+    '4.jpg': carta4,
+    '5.jpg': carta5,
+    '6.jpg': carta6,
+    '7.jpg': carta7,
+    '8.jpg': carta8,
+    '9.jpg': carta9,
+    '10.jpg': carta10,
+    '11.jpg': carta11,
+    '12.jpg': carta12,
+    '13.jpg': carta13,
+    '14.jpg': carta14,
+    '15.jpg': carta15,
+    '16.jpg': carta16,
+    '17.jpg': carta17,
+    '18.jpg': carta18,
+    '19.jpg': carta19,
+    '20.jpg': carta20,
+    'naranja.jpg': cartaNaranja,
+    'primero.png': cartaPrimero,
+    'segundo.png': cartaSegundo,
+    'tercero.png': cartaTercero,
+    'verde.jpg': cartaVerde
+}
 export default {
     data() {
         return {
@@ -246,6 +300,9 @@ export default {
         // console.log(me.cartas[3].src, '--', me.cartasTmp[3].src)
     },
     methods: {
+        imgCarta(nombre) {
+            return IMAGENES_CARTAS[nombre]
+        },
         f_randomico(a, b) {
             if (Math.random() < 0.5) return -1;
             else return 1;
